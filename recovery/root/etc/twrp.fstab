@@ -1,0 +1,30 @@
+# mount point	fstype		device			[device2]
+
+/modem         emmc     /dev/block/bootdevice/by-name/modem
+/sbl1          emmc     /dev/block/bootdevice/by-name/sbl1
+#OPPO 2014-02-18 hewei delete for without sbl2 and sbl3
+#/sbl2          emmc     /dev/block/bootdevice/by-name/sbl2
+#/sbl3          emmc     /dev/block/bootdevice/by-name/sbl3
+/rpm           emmc     /dev/block/bootdevice/by-name/rpm
+/tz            emmc     /dev/block/bootdevice/by-name/tz
+/modem_st1     emmc     /dev/block/bootdevice/by-name/modemst1
+/modem_st2     emmc     /dev/block/bootdevice/by-name/modemst2
+/static_nv_bk  emmc     /dev/block/bootdevice/by-name/oppostanvbk
+/oppodycnvbk   emmc     /dev/block/bootdevice/by-name/oppodycnvbk
+/aboot         emmc     /dev/block/bootdevice/by-name/aboot
+/boot		   emmc		/dev/block/bootdevice/by-name/boot
+/system		   ext4		/dev/block/bootdevice/by-name/system
+#OPPO 2014-11-17 Junren_Jie@EXP.sysframework modify for support entire disk encryption
+#/data		   ext4		/dev/block/bootdevice/by-name/userdata
+/data		   ext4		/dev/block/bootdevice/by-name/userdata length=-16384
+/cache		   ext4		/dev/block/bootdevice/by-name/cache
+/misc		   emmc		/dev/block/bootdevice/by-name/misc
+/recovery	   emmc		/dev/block/bootdevice/by-name/recovery
+#OPPO 2014-01-14 hewei Add for logo volume and reserve4 volume
+/logo          emmc       /dev/block/bootdevice/by-name/LOGO
+/reserve4      emmc     /dev/block/bootdevice/by-name/reserve4
+/driver      emmc     /dev/block/bootdevice/by-name/DRIVER
+
+#OPPO 2014-01-26 hewei modify for 13077  mount  T-card and sdcard
+/external_sd		   vfat		/dev/block/mmcblk1p1	 /dev/block/mmcblk1
+/sdcard		   ext4		/dev/block/bootdevice/by-name/sdcard	 /dev/block/mmcblk0
